@@ -30,4 +30,6 @@ word_counts = Counter(words)
 
 # сортируем словарь по убыванию значений и выводим первые 10 элементов
 top_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:10]
+
+
 print(top_words)
