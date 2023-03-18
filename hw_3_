@@ -1,0 +1,27 @@
+# 4 Создайте словарь со списком вещей для похода
+# в качестве ключа и их массой в качестве значения. 
+# Определите какие вещи влезут в рюкзак передав его максимальную грузоподъёмность.
+# Достаточно вернуть один допустимый вариант. 
+# *Верните все возможные варианты комплектации рюкзака.
+
+ibackpack = {
+    'tent': 3,
+    'sleeping bag': 2,
+    'stove': 1,
+    'food': 5,
+    'water': 4,
+    'clothes': 2,
+    'first aid kit': 2
+}
+
+max_weight = 10
+current_weight = 0
+items = []
+
+for item, weight in ibackpack.items():
+    if current_weight + weight <= max_weight:
+        items.append(item)
+        current_weight += weight
+
+
+print(items)
